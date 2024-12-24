@@ -281,4 +281,14 @@ body {
         font-size: 0.7rem
 
     }
+
+    .banner:hover {
+        background-color: #cab8b1;
+        transform: translate(-50%, 0) scale(1.1); 
+    }
+    
+    .banner:active {
+        transform: translate(-50%, 0) scale(1); 
+        box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 }
