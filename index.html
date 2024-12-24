@@ -43,10 +43,31 @@
             // Chuyển sang màu tiếp theo
             colorIndex = (colorIndex + 1) % colors.length;
         });
+
+
+        const audio = new Audio('nhac.mp3'); 
+        audio.loop = true; // Lặp lại nhạc
+
+        // Biến cờ để kiểm tra nhạc đã phát hay chưa
+        let isAudioStarted = false;
+
+        banner.addEventListener('click', () => {
+            // Đổi màu nền
+            body.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+
+            // Chỉ phát nhạc lần đầu
+            if (!isAudioStarted) {
+                audio.play().catch(error => {
+                    console.log('Autoplay bị chặn: ', error);
+                });
+                isAudioStarted = true; // Đánh dấu nhạc đã phát
+            }
+        });
     </script>
-    <audio autoplay>
+    <!-- <audio autoplay loop hidden muted>
         <source src="nhac.mp3" type="audio/mpeg">
-    </audio>       
+    </audio>        -->
     
     
     <script src="script.js"></script>
