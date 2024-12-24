@@ -266,15 +266,15 @@ body {
     .banner {
         font-size: 1rem; /* Giảm thêm kích thước chữ banner */
         padding: 6px 24px;
-        top: 567px;
+        top: 470px;
     }
 
     .greeting-message {
-        font-size: 16px; /* Giảm thêm kích thước lời chúc */
+        font-size: 16px; 
     }
 
     .greeting{
-        margin-top: -160px;
+        margin-top: -130px;
     }
 
     .sub-text{
